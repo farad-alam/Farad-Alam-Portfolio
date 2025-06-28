@@ -6,8 +6,7 @@ export const personalInfo = {
   email: "farad.dev@gmail.com",
   phone: "+8801575061066",
   location: "Rajshahi, Bangladesh",
-  resumeUrl:
-    "https://drive.google.com/file/d/111PN0FCfDInvtXR_s1C8w-zvTJ_xy90T/view",
+  resumeUrl: "https://drive.google.com/file/d/111PN0FCfDInvtXR_s1C8w-zvTJ_xy90T/view",
   profileImage: "https://i.ibb.co/vChChX8J/Farad-Alam-Side-Croped.png",
   social: {
     github: "https://github.com/farad-alam",
@@ -191,7 +190,6 @@ export const education = [
     degree: "Bachelor of Science in Zoology",
     school: "National University",
     period: "2018 - 2022",
-    description:
-      "Completed undergraduate studies with a major in Zoology. Developed strong analytical and research skills while independently pursuing web development and programming.",
+    description: "Completed undergraduate studies with a major in Zoology. Developed strong analytical and research skills while independently pursuing web development and programming.",
   },
 ];
