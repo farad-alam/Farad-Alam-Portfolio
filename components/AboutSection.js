@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { GraduationCap, MapPin } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { GraduationCap, MapPin } from "lucide-react";
 
 export default function AboutSection() {
   const [personalInfo, setPersonalInfo] = useState(null);
 
   useEffect(() => {
-    fetch('/data/personal-info.json')
-      .then(res => res.json())
-      .then(data => setPersonalInfo(data));
+    fetch("/data/personal-info.json")
+      .then((res) => res.json())
+      .then((data) => setPersonalInfo(data));
   }, []);
 
   if (!personalInfo) {
@@ -67,16 +67,16 @@ export default function AboutSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </motion.div>
-              
+
               {/* Decorative Elements */}
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full opacity-20"
               ></motion.div>
               <motion.div
                 animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-full opacity-20"
               ></motion.div>
             </div>
@@ -98,7 +98,33 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-lg text-muted-foreground leading-relaxed"
               >
-                {personalInfo.bio}
+                {/* {personalInfo.bio} */}
+                I’m a full-stack developer with a unique journey into tech. My
+                career began in affiliate marketing, where I worked extensively
+                with WordPress. Frustrated by performance limitations and the
+                inability to fully optimize sites, I dove into custom
+                development — and never looked back. I specialize in{" "}
+                <strong>JavaScript</strong>, <strong>TypeScript</strong>, and{" "}
+                <strong>Node.js</strong>, with expertise in{" "}
+                <strong>React</strong>, <strong>Next.js</strong>, and{" "}
+                <strong>Express.js</strong>. My toolkit also includes Git,
+                PostgreSQL, and MongoDB, enabling me to deliver
+                high-performance, scalable solutions.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-lg text-muted-foreground leading-relaxed"
+              >
+                As a developer, I’m a problem solver and creative thinker who
+                takes pride in writing clean, scalable code. I’m driven by
+                solving real business problems and transforming ideas into
+                functional, impactful products. When I’m not coding, you might
+                find me exploring unknown roads on my bike, chasing both new
+                paths and fresh ideas.
               </motion.p>
 
               <motion.div
@@ -134,9 +160,11 @@ export default function AboutSection() {
                     viewport={{ once: true }}
                     className="text-2xl md:text-3xl font-bold text-primary mb-1"
                   >
-                    4+
+                    2+
                   </motion.div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-sm text-muted-foreground">
+                    Years Experience
+                  </div>
                 </div>
                 <div className="text-center">
                   <motion.div
@@ -146,9 +174,11 @@ export default function AboutSection() {
                     viewport={{ once: true }}
                     className="text-2xl md:text-3xl font-bold text-primary mb-1"
                   >
-                    50+
+                    20+
                   </motion.div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-sm text-muted-foreground">
+                    Projects Completed
+                  </div>
                 </div>
                 <div className="text-center">
                   <motion.div
@@ -160,7 +190,9 @@ export default function AboutSection() {
                   >
                     15+
                   </motion.div>
-                  <div className="text-sm text-muted-foreground">Technologies</div>
+                  <div className="text-sm text-muted-foreground">
+                    Technologies
+                  </div>
                 </div>
               </motion.div>
             </div>
