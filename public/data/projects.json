@@ -1,0 +1,106 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Library Management System",
+      "description": "A comprehensive library management system built with React and Node.js, featuring real-time book tracking, user management, and automated notifications.",
+      "image": "https://i.ibb.co/dJMM3FhF/Library-Management.png",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Express", "Tailwind CSS"],
+      "features": [
+        "Real-time book availability tracking",
+        "User authentication and role management",
+        "Automated email notifications",
+        "Advanced search and filtering"
+      ],
+      "liveDemo": "https://libraryhub-lms.vercel.app/",
+      "github": "https://github.com/farad-alam/Library-Management-Web-App",
+      "challenges": "Implementing real-time updates across multiple user sessions while maintaining data consistency.",
+      "category": "Full Stack"
+    },
+    {
+      "id": 2,
+      "title": "Premium News Aggregator",
+      "description": "A modern news aggregation platform that curates content from multiple sources with AI-powered categorization and personalized recommendations.",
+      "image": "https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "technologies": ["Next.js", "TypeScript", "MongoDB", "OpenAI API", "Shadcn/ui"],
+      "features": [
+        "AI-powered content categorization",
+        "Personalized news recommendations",
+        "Real-time news updates",
+        "Responsive design with dark mode"
+      ],
+      "liveDemo": "https://news-aggregator-demo.vercel.app",
+      "github": "https://github.com/alexjohnson/news-aggregator",
+      "challenges": "Integrating multiple news APIs while maintaining consistent data formatting and implementing efficient caching strategies.",
+      "category": "Frontend"
+    },
+    {
+      "id": 3,
+      "title": "Recipe Sharing Platform",
+      "description": "A social platform for food enthusiasts to share, discover, and rate recipes with interactive cooking features and meal planning tools.",
+      "image": "https://i.ibb.co/4R1Wc8Cq/Recipe-Gram.png",
+      "technologies": ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
+      "features": [
+        "Interactive recipe creation",
+        "Social sharing and rating system",
+        "Meal planning calendar",
+        "Shopping list generation"
+      ],
+      "liveDemo": "https://recipe-book-80756.web.app/",
+      "github": "https://github.com/farad-alam/Recipe-Book-Web-App",
+      "challenges": "Building a complex recipe editor with image uploads and ingredient management while ensuring optimal performance.",
+      "category": "Full Stack"
+    },
+    {
+      "id": 4,
+      "title": "Modern Farming Blog",
+      "description": "A Next.js-powered blog platform focused on sustainable farming practices with SEO optimization and content management features.",
+      "image": "https://i.ibb.co/GfPfqq5C/Grow-wise-farm-1.png",
+      "technologies": ["Next.js", "Markdown", "Tailwind CSS", "Vercel"],
+      "features": [
+        "SEO-optimized blog posts",
+        "Markdown content management",
+        "Newsletter subscription",
+        "Category-based filtering"
+      ],
+      "liveDemo": "https://grow-wise-farm.netlify.app/",
+      "github": "https://github.com/farad-alam/GrowWise-Farm",
+      "challenges": "Implementing static site generation with dynamic content while maintaining excellent SEO performance.",
+      "category": "Frontend"
+    },
+    {
+      "id": 5,
+      "title": "E-commerce Dashboard",
+      "description": "An admin dashboard for e-commerce businesses with analytics, inventory management, and order tracking capabilities.",
+      "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "technologies": ["React", "Node.js", "MongoDB", "Chart.js", "Express"],
+      "features": [
+        "Real-time sales analytics",
+        "Inventory management system",
+        "Order tracking and notifications",
+        "Customer management tools"
+      ],
+      "liveDemo": "https://ecommerce-dashboard-demo.vercel.app",
+      "github": "https://github.com/alexjohnson/ecommerce-dashboard",
+      "challenges": "Creating efficient data visualization components while handling large datasets and real-time updates.",
+      "category": "Full Stack"
+    },
+    {
+      "id": 6,
+      "title": "Weather Forecast App",
+      "description": "A beautiful weather application with location-based forecasts, interactive maps, and weather alerts.",
+      "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "technologies": ["React", "OpenWeather API", "Leaflet", "Tailwind CSS"],
+      "features": [
+        "5-day weather forecasts",
+        "Interactive weather maps",
+        "Location-based services",
+        "Weather alerts and notifications"
+      ],
+      "liveDemo": "https://weather-app-demo.vercel.app",
+      "github": "https://github.com/alexjohnson/weather-app",
+      "challenges": "Integrating multiple weather APIs and creating smooth animations for weather data visualization.",
+      "category": "Frontend"
+    }
+  ]
+}
