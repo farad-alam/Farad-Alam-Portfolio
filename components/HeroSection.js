@@ -46,7 +46,10 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden gradient-bg">
+    <section
+      id="home"
+      className="min-h-screen relative overflow-hidden gradient-bg"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -57,7 +60,7 @@ export default function HeroSection() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',
+            ease: "linear",
           }}
           className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
         />
@@ -69,7 +72,7 @@ export default function HeroSection() {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: 'linear',
+            ease: "linear",
           }}
           className="absolute bottom-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
         />
@@ -91,22 +94,23 @@ export default function HeroSection() {
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4"
               >
-                Hi, I'm{' '}
+                Hi, I'm{" "}
                 <motion.span
                   className="text-primary"
-                  animate={{ 
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                  animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
                   transition={{
                     duration: 5,
                     repeat: Infinity,
-                    ease: 'linear',
+                    ease: "linear",
                   }}
                   style={{
-                    background: 'linear-gradient(90deg, #3B82F6, #6366F1, #3B82F6)',
-                    backgroundSize: '200% 200%',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
+                    background:
+                      "linear-gradient(90deg, #3B82F6, #6366F1, #3B82F6)",
+                    backgroundSize: "200% 200%",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
                   }}
                 >
                   {personalInfo.name}
@@ -128,8 +132,9 @@ export default function HeroSection() {
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="text-lg text-muted-foreground mb-8 max-w-2xl"
               >
-                Passionate about creating beautiful, functional web applications that solve real-world problems.
-                Let's build something amazing together.
+                Passionate about creating beautiful, functional web applications
+                that solve real-world problems. Let's build something amazing
+                together.
               </motion.p>
 
               {/* Action Buttons */}
@@ -152,7 +157,11 @@ export default function HeroSection() {
                   asChild
                   className="px-8 py-3 text-lg font-semibold border-primary text-primary hover:bg-primary hover:text-white"
                 >
-                  <a href={resumeLink.resumeUrl} download={resumeLink.filename}>
+                  <a
+                    href={resumeLink.resumeUrl}
+                    target="_blank"
+                    download={resumeLink.filename}
+                  >
                     <Download className="w-5 h-5 mr-2" />
                     Download Resume
                   </a>
@@ -196,7 +205,11 @@ export default function HeroSection() {
               <div className="relative">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent p-1"
                 >
                   <div className="w-full h-full rounded-full bg-background"></div>
@@ -223,11 +236,11 @@ export default function HeroSection() {
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="flex flex-col items-center text-muted-foreground cursor-pointer"
               onClick={() => {
-                const aboutSection = document.getElementById('about');
-                aboutSection?.scrollIntoView({ behavior: 'smooth' });
+                const aboutSection = document.getElementById("about");
+                aboutSection?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               <span className="text-sm mb-2">Scroll down</span>
