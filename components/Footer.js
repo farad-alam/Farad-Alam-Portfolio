@@ -68,7 +68,7 @@ export default function Footer() {
             className="py-12 text-center"
           >
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-bold text-indigo-500 mb-2">
                 {personalInfo.name}
               </h3>
               <p className="text-muted-foreground">
@@ -78,14 +78,14 @@ export default function Footer() {
 
             <div className="border-t border-border pt-8">
               <p className="text-muted-foreground flex items-center justify-center">
-                Made with{' '}
-                <motion.span
+                Made {' '}
+                {/* <motion.span
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}
                   className="mx-1"
                 >
                   <Heart className="w-4 h-4 text-red-500 fill-current" />
-                </motion.span>{' '}
+                </motion.span>{' '} */}
                 by {personalInfo.name} © {new Date().getFullYear()}
               </p>
             </div>

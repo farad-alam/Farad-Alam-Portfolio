@@ -68,7 +68,7 @@ export default function ProjectsSection() {
           </p>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3">
+          {/* <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -83,7 +83,7 @@ export default function ProjectsSection() {
                 {category}
               </Button>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.div

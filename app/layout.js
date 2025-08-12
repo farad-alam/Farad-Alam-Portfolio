@@ -6,11 +6,11 @@ import Navigation from '@/components/Navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Alex Johnson - Full Stack Developer',
-  description: 'Professional portfolio of Alex Johnson, a passionate full-stack developer specializing in React, Next.js, and modern web technologies.',
-  keywords: 'full stack developer, react, nextjs, javascript, web development, portfolio',
+  title: 'Farad Alam - Full Stack Developer',
+  description: 'Professional portfolio of Farad Alam, a passionate full-stack developer specializing in React, Next.js, and modern web technologies.',
+  keywords: 'full stack developer, front end developer, backend developer, react, nextjs, javascript, typescript, node.js, express.js, web development, portfolio',
   openGraph: {
-    title: 'Alex Johnson - Full Stack Developer',
+    title: 'Farad Alam - Full Stack Developer',
     description: 'Professional portfolio showcasing modern web development projects and skills.',
     type: 'website',
   },
