@@ -55,6 +55,10 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/png" href="/images/farad-favicon.png" />
+        <meta
+          name="google-site-verification"
+          content="ST1Hhm9DearRT78yeK7x1Qr3HHzcw5iUNYSGUguuMGk"
+        />
       </head>
 
       <body className={inter.className}>
