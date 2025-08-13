@@ -1,9 +1,11 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
-import Navigation from '@/components/Navigation';
 
-const inter = Inter({ subsets: ['latin'] });
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import Navigation from "@/components/Navigation";
+import {Providers} from "@/components/Providers";
+
+const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: 'Farad Alam - Full Stack Developer',
@@ -15,7 +17,6 @@ const inter = Inter({ subsets: ['latin'] });
 //     type: 'website',
 //   },
 // };
-
 
 export const metadata = {
   title: "Farad Alam - Full Stack Developer",
@@ -49,25 +50,18 @@ export const metadata = {
   },
 };
 
-
-
-
-
-
-
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <link rel="icon" type="image/png" href="/images/farad-favicon.png"/>
+      <head>
+        <link rel="icon" type="image/png" href="/images/farad-favicon.png" />
+      </head>
 
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <Navigation />
           <main>{children}</main>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

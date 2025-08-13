@@ -1,15 +1,27 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import { Menu, X, Sun, Moon, Home, User, Code, Code2, Briefcase, Mail, BookOpen } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  Sun,
+  Moon,
+  Home,
+  User,
+  Code,
+  Code2,
+  Briefcase,
+  Mail,
+  BookOpen,
+} from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const { theme, setTheme } = useTheme();
+  const [activeSection, setActiveSection] = useState("home");
+  const { resolvedTheme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,24 +29,27 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home', icon: Home },
-    { name: 'About', href: '#about', icon: User },
-    { name: 'Skills', href: '#skills', icon: Code },
-    { name: 'Projects', href: '#projects', icon: Briefcase },
-    { name: 'Contact', href: '#contact', icon: Mail },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: "Home", href: "/", icon: Home },
+    { name: "About", href: "#about", icon: User },
+    { name: "Skills", href: "#skills", icon: Code },
+    { name: "Projects", href: "#projects", icon: Briefcase },
+    { name: "Contact", href: "#contact", icon: Mail },
+    { name: "Blog", href: "/blog", icon: BookOpen },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ["home", "about", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section);
             break;
           }
@@ -42,17 +57,18 @@ export default function Navigation() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href) => {
     setIsOpen(false);
-    if (href.startsWith('#')) {
+    if (href.startsWith("#")) {
       const element = document.getElementById(href.substring(1));
-      element?.scrollIntoView({ behavior: 'smooth' });
+      element?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
 
   if (!mounted) return null;
 
@@ -70,8 +86,9 @@ export default function Navigation() {
             className="font-bold text-xl text-primary"
           >
             <Link href="/" onClick={() => handleNavClick("#home")}>
-              
-              <span className="font-bold text-2xl text-indigo-500">Farad Alam</span>
+              <span className="font-bold text-2xl text-indigo-500">
+                Farad Alam
+              </span>
             </Link>
           </motion.div>
 
@@ -107,10 +124,14 @@ export default function Navigation() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+
+
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
               className="p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? (
                 <Sun className="w-5 h-5" />
               ) : (
                 <Moon className="w-5 h-5" />
@@ -119,7 +140,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Navigation Toggle */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* <div className="md:hidden flex items-center space-x-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -144,7 +165,7 @@ export default function Navigation() {
                 <Menu className="w-5 h-5" />
               )}
             </motion.button>
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Navigation Menu */}
