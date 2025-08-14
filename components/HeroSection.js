@@ -78,7 +78,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 flex items-center min-h-screen pt-16">
+      <div className="relative z-10 flex items-center min-h-screen py-28 md:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Content */}
