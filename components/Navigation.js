@@ -140,7 +140,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Navigation Toggle */}
-          {/* <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -165,7 +165,7 @@ export default function Navigation() {
                 <Menu className="w-5 h-5" />
               )}
             </motion.button>
-          </div> */}
+          </div> 
         </div>
 
         {/* Mobile Navigation Menu */}
